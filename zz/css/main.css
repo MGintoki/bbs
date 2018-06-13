@@ -1,0 +1,26 @@
+.navbar {
+    margin: 0 20% 30px;
+}
+/* body{
+    margin: 0 15%;
+}
+.container{
+    margin-right: 15%;
+    margin-left: 15%;
+} */
+.content-card-head{
+    width: 60px;
+    height: 60px;
+}
+
+.card-mainContent{
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.reply {
+    width: 10px;
+}
+.eye{
+    width: 10px;
+}
