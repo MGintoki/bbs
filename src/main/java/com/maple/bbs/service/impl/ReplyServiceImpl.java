@@ -56,4 +56,8 @@ public class ReplyServiceImpl implements ReplyService {
             return -1;
         }
     }
+    @Override
+    public int replyNum(String replyState){
+        return  replyMapper.replyNum(replyState);
+    }
 }

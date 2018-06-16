@@ -1,11 +1,11 @@
 $($.ajax({
-    url:"http:127.0.0.1:8080/admin/user",
+    url:"http://127.0.0.1:8080/admin/user",
     type:"get",
     dataType:"json",
     success:function(data){
         var trs = "<table class=\"table  table-striped table-bordered\"><tr><th>用户名</th><th>禁言时间</th><th>操作</th></tr>";
         $.each(data.data,function(n,value){
-            trs+="<tr><td>"+value.userName+"</td><td>"+value.banTime+"</td><td><button class=\"btn btn-danger\" onclick='cancelBan(\""+value.userName+"\")'>解除禁言</button></td>";
+            trs+="<tr><td>"+value.userName+"</td><td>"+value.banTime+"</td><td><button class=\"btn btn-danger\" onclick='cancelBan(\""+value.userName+"\")'>解除禁言</button></td></tr>";
         });
         trs+="</table>"
         $("#result").append(trs);
@@ -15,7 +15,7 @@ $($.ajax({
     }
 }));
 $($.ajax({
-url:"http:127.0.0.1:8080/admin/user/pageNum",
+url:"http://127.0.0.1:8080/admin/user/pageNum",
 type:"get",
 dataType:"json",
 success:function(data){
@@ -29,7 +29,7 @@ $("#page").append(buttons);
 }));
 function cancelBan(userName){
 $.ajax({
-url:"http:127.0.0.1:8080/admin/user/cancel",
+url:"http://127.0.0.1:8080/admin/user/cancel",
 type:"post",
 data:{
     userName:userName
@@ -43,7 +43,7 @@ success:function(data){
 };
 function banUser(){
 $.ajax({
-url:"http:127.0.0.1:8080/admin/user/ban",
+url:"http://127.0.0.1:8080/admin/user/ban",
 type:"post",
 data:{
     userName:$("#userName").val(),
@@ -58,7 +58,7 @@ success:function(data){
 };
 function changePage(page){
 $.ajax({
-    url:"http:127.0.0.1:8080/admin/user",
+    url:"http://127.0.0.1:8080/admin/user",
     type:"get",
     data:{
         page:page
