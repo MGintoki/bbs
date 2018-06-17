@@ -16,20 +16,19 @@
 </head>
 
 <script>
-  function changeLogo() {
-    var logoPic = document.getElementById("logoPic1");
+  function changeLogo(){
+    var logoPic=document.getElementById("logoPic1");
     logoPic.setAttribute("src", "images/logoHover.png");
     var logoText = document.getElementById("logo-text");
     logoText.setAttribute("style", "color:#b3d6e4;");
   }
-  function changeLogo1() {
-    var logoPic = document.getElementById("logoPic1");
+  function changeLogo1(){
+    var logoPic=document.getElementById("logoPic1");
     logoPic.setAttribute("src", "images/logoUnHover.png");
 
   }
-
+  
 </script>
-
 <body>
   <div class="navbar navbar-default">
     <div class="container">
@@ -60,28 +59,21 @@
         <li>
           <a href="reg.html">注册</a>
         </li>
-        <li class="userPane">
-          <img class="userPane-userHead img-circle" src="images/userHead.png" alt="img-circle">
-        </li>
-        <li class="userPane">
+        <li>
           <div class="dropdown">
-            <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
-            <!-- Mgintoki -->
-            <!-- </button> -->
-            <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
-              MGintoki
-              <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <!-- #user取用户头像，如果有的话，#username取用户id -->
+              #userpic #username
             </button>
-            <div class="dropdown-menu list-group">
-              <div class="media dropdown-profile ">
+            <div class="dropdown-menu ">
+              <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/headpic.png">
                 </div>
                 <div class="media-body">
-                  <a clas href="./profile.html" class="media-heading">个人主页</a>
+                  <p class="media-heading">个人主页</p>
                 </div>
               </div>
-              <div role="separator" class="divider"></div>
               <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/setting.png">
@@ -90,7 +82,6 @@
                   <p class="media-heading">资料设置</p>
                 </div>
               </div>
-              <div role="separator" class="divider"></div>
               <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/1.png">
@@ -99,7 +90,6 @@
                   <p class="media-heading">我的帖子</p>
                 </div>
               </div>
-              <div role="separator" class="divider"></div>
               <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/heart.png">
@@ -109,7 +99,6 @@
                   <p class="media-heading">我的收藏</p>
                 </div>
               </div>
-              <div role="separator" class="divider"></div>
               <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/out.png">
@@ -146,7 +135,6 @@
               <h5 class="panel-title">置顶区</h5>
             </div>
             <div class="panel-body">
-              <!-- 一条帖子 -->
               <div class="well well-sm">
                 <!-- 主页帖子 -->
                 <div class="row">
@@ -158,35 +146,30 @@
                   <div class="col-sm-8 clearfix" card-mainContent>
                     <div class="row">
                       <!-- 帖子类型，btn-type -->
-
-                      <a class="card-username col-sm-2">
-                        MGintoki
-                      </a>
-                      <!-- 帖子标题 -->
-                      <div class="col-sm-8">
-                        <h4>测试帖子</h4>
+                      <div class="col-sm-2 clearfix">
+                        <button class="btn btn-warning btn-sm">社区公告</button>
                       </div>
-                      <div class="col-sm-2">
-                       <img class="reply" src="images/reply.png" alt=""> 100
+                      <!-- 帖子标题 -->
+                      <div class="col-sm-10 ">
+                        <h4>测试帖子</h4>
                       </div>
                     </div>
                     <div class="row">
                       <!-- 作者 -->
                       <div class="col-sm-2">
-                        <div class="label label-info content-label ">社区公告</div>
+                        MGintoki
                       </div>
                       <!-- 发帖时间 -->
-                      <div class="col-sm-5">
+                      <div class="col-sm-10">
                         2018-6-13 15:30:23
-                      </div>
-                      <div class="recent-reply col-sm-5">
-                        最近回复于
-                        <a href="">fengluo1229</a>
                       </div>
                     </div>
                   </div>
                   <!-- 阅读与回帖数量 -->
-
+                  <div class="col-sm-2">
+                    <img class="reply" src="images/reply.png" alt="">100
+                    <img class="eye" src="images/eye.png" alt="">40
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,7 +178,7 @@
         <div class="card">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <ul class="nav nav-tabs nav-justified" role="tablist">
+              <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item active">
                   <a class="nav-link active" data-toggle="tab" href="#home">所有帖子</a>
                 </li>
@@ -210,17 +193,17 @@
                   <a class="nav-link" data-toggle="tab" href="#menu2">投诉建议</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">求助问答</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">休闲交友</a>
-                </li>
-                
+                    <a class="nav-link" data-toggle="tab" href="#menu2">求助问答</a>
+                  </li>
+  
 
               </ul>
             </div>
             <div class="panel-body">
-              
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quibusdam voluptatum numquam laboriosam libero, eum delectus
+              sint a ipsum quam porro eius ducimus, ullam eos et consequatur excepturi recusandae sunt Lorem ipsum, dolor
+              sit amet consectetur adipisicing elit. Culpa quibusdam voluptatum numquam laboriosam libero, eum delectus sint
+              a ipsum quam porro eius ducimus, ullam eos et consequatur excepturi recusandae sunt
               <!-- 一条帖子 -->
               <div class="well well-sm">
                 <!-- 主页帖子 -->
@@ -233,112 +216,101 @@
                   <div class="col-sm-8 clearfix" card-mainContent>
                     <div class="row">
                       <!-- 帖子类型，btn-type -->
-
-                      <a class="card-username col-sm-2">
-                        MGintoki
-                      </a>
-                      <!-- 帖子标题 -->
-                      <div class="col-sm-8">
-                        <h4>测试帖子</h4>
+                      <div class="col-sm-2 clearfix">
+                        <div class="label label-warning content-label ">社区公告</div>
                       </div>
-                      <div class="col-sm-2">
-                       <img class="reply" src="images/reply.png" alt=""> 100
+                      <!-- 帖子标题 -->
+                      <div class="col-sm-10 ">
+                        <h4>测试帖子</h4>
                       </div>
                     </div>
                     <div class="row">
                       <!-- 作者 -->
                       <div class="col-sm-2">
-                        <div class="label label-info content-label ">社区公告</div>
+                        MGintoki
                       </div>
                       <!-- 发帖时间 -->
-                      <div class="col-sm-5">
+                      <div class="col-sm-10">
                         2018-6-13 15:30:23
-                      </div>
-                      <div class="recent-reply col-sm-5">
-                        最近回复于
-                        <a href="">fengluo1229</a>
                       </div>
                     </div>
                   </div>
                   <!-- 阅读与回帖数量 -->
-
+                  <div class="col-sm-2">
+                    <img class="reply" src="images/reply.png" alt="">100
+                    <img class="eye" src="images/eye.png" alt="">40
+                  </div>
                 </div>
               </div>
 
-             <!-- 一条帖子 -->
-             <div class="well well-sm">
-              <!-- 主页帖子 -->
-              <div class="row">
-                <!-- 发帖人头像 -->
-                <div class="col-sm-2 clearfix">
-                  <img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">
-                </div>
-                <!-- 帖子主体 -->
-                <div class="col-sm-8 clearfix" card-mainContent>
-                  <div class="row">
-                    <!-- 帖子类型，btn-type -->
-
-                    <a class="card-username col-sm-2">
-                      MGintoki
-                    </a>
-                    <!-- 帖子标题 -->
-                    <div class="col-sm-8 ">
-                      <h4>测试帖子</h4>
+              <div class="well well-sm">
+                <!-- 主页帖子 -->
+                <div class="row">
+                  <!-- 发帖人头像 -->
+                  <div class="col-sm-2 clearfix">
+                    <img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">
+                  </div>
+                  <!-- 帖子主体 -->
+                  <div class="col-sm-8 clearfix" card-mainContent>
+                    <div class="row">
+                      <!-- 帖子类型，btn-type -->
+                      <div class="col-sm-2 clearfix">
+                        <div class="label label-warning">社区公告</div>
+                      </div>
+                      <!-- 帖子标题 -->
+                      <div class="col-sm-10 ">
+                        <h4>测试帖子</h4>
+                      </div>
                     </div>
-                    <div class="col-sm-2">
-                      <img class="reply" src="images/reply.png" alt=""> 100
+                    <div class="row">
+                      <!-- 作者 -->
+                      <div class="col-sm-2">
+                        MGintoki
+                      </div>
+                      <!-- 发帖时间 -->
+                      <div class="col-sm-10">
+                        2018-6-13 15:30:23
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <!-- 作者 -->
-                    <div class="col-sm-2">
-                      <div class="label label-info content-label ">社区公告</div>
-                    </div>
-                    <!-- 发帖时间 -->
-                    <div class="col-sm-5">
-                      2018-6-13 15:30:23
-                    </div>
-                    <div class="recent-reply col-sm-5">
-                      最近回复于
-                      <a href="">fengluo1229</a>
-                    </div>
+                  <!-- 阅读与回帖数量 -->
+                  <div class="col-sm-2">
+                    <img class="reply" src="images/reply.png" alt="">100
+                    <img class="eye" src="images/eye.png" alt="">40
                   </div>
                 </div>
-                <!-- 阅读与回帖数量 -->
-
               </div>
-            </div>
 
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="panel panel-default">
-
-          <div class="panel-body">
-            <div class="media">
-
-              <div class="row logo-total">
-                <div class="col-sm-5">
-                  <div class="media-left media-middle ">
-                    <a href="#" onclick="changeLogo();return false;" onmouse="changeLogo1();return false;">
-                      <img id="logoPic1" class="media-object logo logoUnHover" src="images/logoUnHover.png" alt="...">
-                    </a>
+          <div class="panel panel-default">
+            
+              <div class="panel-body">
+                  <div class="media">
+                    
+                      <div class="row logo-total">
+                        <div class="col-sm-5">
+                      <div class="media-left media-middle ">
+                        <a href="#" onclick ="changeLogo();return false;" onmouse="changeLogo1();return false;" >
+                          <img id="logoPic1" class="media-object logo logoUnHover" src="images/logoUnHover.png" alt="..." >
+                        </a>
+                      </div>
+                    </div>
+                    <div class=" logo-text col-sm-7">
+                      <div class="media-body ">
+                        <p style="" class="media-heading logo-text" id="logo-text" >Communicate and share </p>
+                        
+                      
+                    </div>
                   </div>
-                </div>
-                <div class=" logo-text col-sm-7">
-                  <div class="media-body ">
-                    <div  class="media-heading logo-text" id="logo-text">MAPLE</div>
-
-
-                  </div>
-                </div>
+                    </div>
+                    </div>
+  
               </div>
             </div>
-
-          </div>
-        </div>
         <div class="tools">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -371,7 +343,7 @@
             </div>
           </div>
         </div>
-
+        
 
       </div>
     </div>
