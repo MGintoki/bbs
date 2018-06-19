@@ -12,13 +12,10 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/js1/nav.js"></script>
+    <script src="js/nav.js"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
-
-    <script src="js/js1/profile.js"></script>
-
-    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <title>发表帖子</title>
 </head>
 
 <body>
@@ -31,7 +28,12 @@
             <li>
                 <a class="active" href="#">首页</a>
             </li>
-
+            <!--<li>-->
+            <!--<a href="#">产品</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="#">联系我们</a>-->
+            <!--</li>-->
         </ul>
         <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -51,7 +53,9 @@
             </li>
             <li class="home-userPane">
                 <div class="dropdown">
-
+                    <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
+                    <!-- Mgintoki -->
+                    <!-- </button> -->
                     <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
                         MGintoki
                         <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
@@ -119,42 +123,80 @@
         </ul>
     </div>
 </div>
-    <div class="container profile">
+    <div class="container">
         <div class="row">
             <div class="col-sm-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">个人帖子</h3>
+                        <h3 class="panel-title card-title">2年前他为教育事业和高圆圆分手，今成这般，高圆圆：我有一句MMP如鲠在喉</h3>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <span class="card-userName">用户名是我</span>
+                                <div class="label label-info">zzzz</div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="news-status">
+                                    25分钟前发布
+
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="panel-body">
-                        <div class="well">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, d oloribus omnis totam obcaecati nam quaerat aliquid cum esse
-                            facilis aperiam, sequi recusandae magni assumenda earum voluptatum reprehenderit officia rem
-                            placeat.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium adipisci amet consectetur atqu e minima necessitatibus
+                        sapiente expedita, ab molestias quisquam aliquid eos modi ipsa architecto blanditiis sint ad? Perferendis.
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">回帖区</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="well well-sm">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                    <img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">
+                            </div>
+                            <div class="col-sm-10">
+                                <a href="user.html">MGintoki</a>
+                                <p>15分钟前</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                           <div class="reply-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae
+                            , doloribus inventore sunt quidem culpa quam soluta, illo laboriosam ea ullam adipisci vero, expedita ipsam repellat deserunt quia nam dolorem!</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                        
+                        <div class="panel-body">
+                                <textarea class="form-control" rows="6" placeholder="请输入你的回复."></textarea>
+                            <button type="button" class="btn btn-success btn-block reply-btn">回复</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="tools">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">快捷通道</h3>
+                        </div>
+                        <div class="panel-body">
+                            <button type="button" class="btn btn-success btn-block">写点什么</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-
-                        <ul class="list-group" id="porfile-group">
-                            <li class="list-group-item"><img class="img-circle" id="profile-img" src="images/userHead.png" alt="userHead" class="img-responsive"></li>
-                            <li class="list-group-item"><h3 class="username">MGintoki</h3></li>
-                            <li class="list-group-item"><h6 class="regTime">2018-6-15</h6></li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>
-
 
         </div>
     </div>
+
 </body>
 
 </html>

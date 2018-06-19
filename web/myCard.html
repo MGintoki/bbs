@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,12 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/js1/nav.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/myCard.js"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <title>发布帖子</title>
+    <title>我的帖子</title>
 </head>
+
 <body>
 <div class="navbar navbar-default">
     <div class="container">
@@ -46,13 +49,12 @@
                 <a href="reg.html">注册</a>
             </li>
             <li class="home-userPane" id="userPane">
-                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg" alt="img-circle">
+                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg"
+                     alt="img-circle">
             </li>
             <li class="home-userPane">
                 <div class="dropdown">
-                    <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
-                    <!-- Mgintoki -->
-                    <!-- </button> -->
+
                     <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
                         MGintoki
                         <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
@@ -63,7 +65,7 @@
                                 <img class="align-self-center mr-1" src="images/headpic.png">
                             </div>
                             <div class="media-body">
-                                <a  href="./profile.html" class="media-heading">个人主页</a>
+                                <a href="./profile.html" class="media-heading">个人主页</a>
                             </div>
                         </div>
                         <div role="separator" class="divider"></div>
@@ -100,7 +102,7 @@
                                 <img class="align-self-center mr-1" src="images/out.png">
                             </div>
 
-                            <div class="media-body" >
+                            <div class="media-body">
                                 <a id="loginOut" href="#" class="media-heading">退出登陆</a>
                             </div>
                         </div>
@@ -120,29 +122,37 @@
         </ul>
     </div>
 </div>
-    <div class="container">
-        <div class="row">
-                <div class="panel panel-default write-card-panel">
-                        <div class="panel-heading">
-                                <h3 class="panel-title"> <span class="glyphicon glyphicon-pencil" aria-hidden=""></span>发表新的帖子</h3>
-                        </div>
-                        <div class="panel-body">
-                            <input type="text" class="form-control" placeholder="请输入帖子标题" name="" id="">
-                            <select class="form-control write-card-select">
-                                <option value="">技术交流</option>
-                                <option value="">投诉建议</option>
-                                <option value="">日常灌水</option>
-                                <option value="">求助问答</option>
-                                <option value="">休闲交友</option>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">我的帖子</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
 
-                            </select>
-                            <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="请输入帖子内容"></textarea>
-                            <button type="button" class="btn btn-success btn-block write-card-btn">
-                                <span class="glyphicon glyphicon-ok" aria-hidden=""></span>       发布
-                            </button>
-                        </div>
-                    </div>
+                    <thead>
+                    <tr>
+                        <th>删除请勾选</th>
+                        <th>用户名</th>
+                        <th>帖子名称</th>
+                        <th>发帖时间</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tBody">
+
+
+                    </tbody>
+                </table>
+
+                <button id="btn-delete" class="btn btn-danger btn-deleteCard">删除</button>
+
+
+            </div>
         </div>
+
     </div>
+</div>
 </body>
+
 </html>

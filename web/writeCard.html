@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +11,12 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/js1/nav.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/writeCard.js"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <title>我的帖子</title>
+    <link rel="stylesheet" type="text/css" href="css/writeCard.css">
+    <title>发布帖子</title>
 </head>
-
 <body>
 <div class="navbar navbar-default">
     <div class="container">
@@ -122,84 +122,30 @@
         </ul>
     </div>
 </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">我的帖子</h3>
-                </div>
-                <div class="panel-body">
-                    <table class="table table-striped">
+                <div class="panel panel-default write-card-panel">
+                        <div class="panel-heading">
+                                <h3 class="panel-title"> <span class="glyphicon glyphicon-pencil" aria-hidden=""></span>发表新的帖子</h3>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" placeholder="请输入帖子标题" name="" id="writeCard-title">
+                            <select id="writeCard-select" class="form-control write-card-select">
+                                <option value="技术交流">技术交流</option>
+                                <option value="投诉建议">投诉建议</option>
+                                <option value="日常灌水">日常灌水</option>
+                                <option value="求助问答">求助问答</option>
+                                <option value="休闲交友">休闲交友</option>
 
-                        <thead>
-                            <tr>
-                                <th>删除请勾选</th>
-                                <th>用户名</th>
-                                <th>帖子名称</th>
-                                <th>发帖时间</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                
-                                    <th>
-                                      
-                                            <label>
-                                              <input type="checkbox"> 
-                                            </label>
-                                          
-                            </th>
-                                <th>用户名</th>
-                                <th>帖子名称</th>
-                                <th>发帖时间</th>
-                            </tr>
-                            <tr>
-                                    <th>
-                                      
-                                            <label>
-                                              <input type="checkbox"> 
-                                            </label>
-                                          
-                            </th>
-                                <th>用户名</th>
-                                <th>帖子名称</th>
-                                <th>发帖时间</th>
-                            </tr>
-                            <tr>
-                                    <th>
-                                      
-                                            <label>
-                                              <input type="checkbox"> 
-                                            </label>
-                                          
-                            </th>
-                                <th>用户名</th>
-                                <th>帖子名称</th>
-                                <th>发帖时间</th>
-                            </tr>
-                            <tr>
-                                    <th>
-                                      
-                                            <label>
-                                              <input type="checkbox"> 
-                                            </label>
-                                          
-                            </th>
-                                <th>用户名</th>
-                                <th>帖子名称</th>
-                                <th>发帖时间</th>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <button class="btn btn-danger btn-deleteCard">删除</button>
-
-
-                </div>
-            </div>
-
+                            </select>
+                            <input type="text" class="form-control" placeholder="请输入一个标签" name="" id="writeCard-label">
+                            <textarea class="form-control" name="" id="writeCard-textarea" cols="30" rows="5" placeholder="请输入帖子内容"></textarea>
+                            <button id="writeCard-btn" type="button" class="btn btn-success btn-block write-card-btn">
+                                <span class="glyphicon glyphicon-ok" aria-hidden=""></span>       发布
+                            </button>
+                        </div>
+                    </div>
         </div>
     </div>
 </body>
-
 </html>

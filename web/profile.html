@@ -12,15 +12,13 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/js1/nav.js"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <title>用户设置</title>
-</head>
-<style>
-</style>
-<script>
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <script src="js/nav.js"></script>
+    <script src="js/profile.js"></script>
 
-</script>
+    <title>个人主页</title>
+</head>
 
 <body>
 <div class="navbar navbar-default">
@@ -32,12 +30,7 @@
             <li>
                 <a class="active" href="#">首页</a>
             </li>
-            <!--<li>-->
-            <!--<a href="#">产品</a>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<a href="#">联系我们</a>-->
-            <!--</li>-->
+
         </ul>
         <form class="navbar-form navbar-left">
             <div class="form-group">
@@ -53,13 +46,12 @@
                 <a href="reg.html">注册</a>
             </li>
             <li class="home-userPane" id="userPane">
-                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg" alt="img-circle">
+                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg"
+                     alt="img-circle">
             </li>
             <li class="home-userPane">
                 <div class="dropdown">
-                    <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
-                    <!-- Mgintoki -->
-                    <!-- </button> -->
+
                     <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
                         MGintoki
                         <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
@@ -70,7 +62,7 @@
                                 <img class="align-self-center mr-1" src="images/headpic.png">
                             </div>
                             <div class="media-body">
-                                <a  href="./profile.html" class="media-heading">个人主页</a>
+                                <a href="./profile.html" class="media-heading">个人主页</a>
                             </div>
                         </div>
                         <div role="separator" class="divider"></div>
@@ -107,7 +99,7 @@
                                 <img class="align-self-center mr-1" src="images/out.png">
                             </div>
 
-                            <div class="media-body" >
+                            <div class="media-body">
                                 <a id="loginOut" href="#" class="media-heading">退出登陆</a>
                             </div>
                         </div>
@@ -127,78 +119,44 @@
         </ul>
     </div>
 </div>
-    <div class="container">
-        <div class="row">
+<div class="container profile">
+    <div class="row">
+        <div class="col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span class="glyphicon glyphicon-cog" aria-hidden=""></span> 修改个人信息
+                    <h3 class="panel-title">个人帖子</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="userSetting-content">
-                        <div class="userSetting-userHead">
-                            <div>
-                                <img class="img-thumbnail userSetting-userHead" src="images/userHead.png" alt="">
-                            </div>
-                            <button class="btn btn-success btn-block userSetting-btn">更换头像</button>
-                        </div>
-                        <form class="form-horizontal userSetting-form">
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">
-                                    用户名
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control userSetting-form-item" value="MGintoki">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">
-                                    密码
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control userSetting-form-item" value="MGintoki">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">
-                                    性别
-                                </label>
-                                <div class="col-sm-10">
-                                    <select class="form-control">
-                                        <option>男</option>
-                                        <option>女</option>
-
-
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">
-                                    邮箱
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="mail" class="form-control userSetting-form-item" value="MGintoki">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">
-                                    个性签名
-                                </label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control userSetting-form-item" value="MGintoki">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-success btn-block userSetting-submit-btn">提交</button>
-                            </div>
-
-
-                        </form>
+                    <div class="well">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, d oloribus omnis totam obcaecati
+                        nam quaerat aliquid cum esse
+                        facilis aperiam, sequi recusandae magni assumenda earum voluptatum reprehenderit officia rem
+                        placeat.
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <ul class="list-group" id="porfile-group">
+                        <li class="list-group-item"><img class="img-circle" id="profile-img" src="images/userHead.png"
+                                                         alt="userHead" class="img-responsive"></li>
+                        <li class="list-group-item"><h3 class="username">MGintoki</h3></li>
+                        <li class="list-group-item"><h6 class="regTime">2018-6-15</h6></li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+
+                    </ul>
+                </div>
+            </div>
+
 
         </div>
+
+
     </div>
+</div>
 </body>
 
 </html>

@@ -12,11 +12,15 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/js1/nav.js"></script>
+    <script src="js/nav.js"></script>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/card.css">
-    <title>发表帖子</title>
+    <title>用户设置</title>
 </head>
+<style>
+</style>
+<script>
+
+</script>
 
 <body>
 <div class="navbar navbar-default">
@@ -125,78 +129,76 @@
 </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title card-title">2年前他为教育事业和高圆圆分手，今成这般，高圆圆：我有一句MMP如鲠在喉</h3>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <span class="card-userName">用户名是我</span>
-                                <div class="label label-info">zzzz</div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-cog" aria-hidden=""></span> 修改个人信息
+                </div>
+                <div class="panel-body">
+                    <div class="userSetting-content">
+                        <div class="userSetting-userHead">
+                            <div>
+                                <img class="img-thumbnail userSetting-userHead" src="images/userHead.png" alt="">
                             </div>
-                            <div class="col-sm-9">
-                                <div class="news-status">
-                                    25分钟前发布
-
-
+                            <button class="btn btn-success btn-block userSetting-btn">更换头像</button>
+                        </div>
+                        <form class="form-horizontal userSetting-form">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    用户名
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control userSetting-form-item" value="MGintoki">
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    密码
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control userSetting-form-item" value="MGintoki">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    性别
+                                </label>
+                                <div class="col-sm-10">
+                                    <select class="form-control">
+                                        <option>男</option>
+                                        <option>女</option>
 
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium adipisci amet consectetur atqu e minima necessitatibus
-                        sapiente expedita, ab molestias quisquam aliquid eos modi ipsa architecto blanditiis sint ad? Perferendis.
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">回帖区</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="well well-sm">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                    <img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">
+
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm-10">
-                                <a href="user.html">MGintoki</a>
-                                <p>15分钟前</p>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    邮箱
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="mail" class="form-control userSetting-form-item" value="MGintoki">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                           <div class="reply-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae
-                            , doloribus inventore sunt quidem culpa quam soluta, illo laboriosam ea ullam adipisci vero, expedita ipsam repellat deserunt quia nam dolorem!</p>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                        
-                        <div class="panel-body">
-                                <textarea class="form-control" rows="6" placeholder="请输入你的回复."></textarea>
-                            <button type="button" class="btn btn-success btn-block reply-btn">回复</button>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="tools">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">快捷通道</h3>
-                        </div>
-                        <div class="panel-body">
-                            <button type="button" class="btn btn-success btn-block">写点什么</button>
-                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">
+                                    个性签名
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control userSetting-form-item" value="MGintoki">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block userSetting-submit-btn">提交</button>
+                            </div>
+
+
+                        </form>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-
 </body>
 
 </html>

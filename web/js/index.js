@@ -15,7 +15,7 @@ window.onload = function () {
 };
 function getHeadImg(userName, obj) {
 
-    ($.ajax({
+    $.ajax({
         url: "http://127.0.0.1:8080/userInfo",
         type: "post",
         dataType:"json",
@@ -33,7 +33,7 @@ function getHeadImg(userName, obj) {
 
 
         }
-    }));
+    });
 
 
 }

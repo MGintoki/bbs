@@ -1,4 +1,6 @@
-
+/**
+ * 存放导航栏js以及一些全局的js
+ */
 $(function () {
     if(sessionStorage.user){
         $(".home-login").hide();
@@ -32,8 +34,14 @@ $(function () {
     });
 
 });
+/**
+ * 为全局的所有名字添加一个点击事件
+ * 跳转到个人主页并且传入一个参数visitName
+ */
 $(function () {
-
-
+    $(".visitName").click(function () {
+        // var visitName =
+        window.location.href = URL;
+    })
 });
 
