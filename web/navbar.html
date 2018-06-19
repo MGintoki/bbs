@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">BBS论坛</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="active" href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">产品</a>
+            </li>
+            <li>
+                <a href="#">联系我们</a>
+            </li>
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-default btn-sm">搜索一下</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="home-login" href="login.html">登录</a>
+            </li>
+            <li class="home-login">
+                <a href="reg.html">注册</a>
+            </li>
+            <li class="home-userPane" id="userPane">
+                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg" alt="img-circle">
+            </li>
+            <li class="home-userPane">
+                <div class="dropdown">
+                    <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
+                    <!-- Mgintoki -->
+                    <!-- </button> -->
+                    <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        MGintoki
+                        <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                    </button>
+                    <div class="dropdown-menu list-group" id="navbar-dropdown-menu">
+                        <div class="media dropdown-profile ">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/headpic.png">
+                            </div>
+                            <div class="media-body">
+                                <a  href="./profile.html" class="media-heading">个人主页</a>
+                            </div>
+                        </div>
+                        <div role="separator" class="divider"></div>
+                        <div class="media">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/setting.png">
+                            </div>
+                            <div class="media-body">
+                                <a href="userSetting.html" class="media-heading">资料设置</a>
+                            </div>
+                        </div>
+                        <div role="separator" class="divider"></div>
+                        <div class="media">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/1.png">
+                            </div>
+                            <div class="media-body">
+                                <a href="myCard.html" class="media-heading">我的帖子</a>
+                            </div>
+                        </div>
+                        <div role="separator" class="divider"></div>
+                        <div class="media">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/heart.png">
+                            </div>
+
+                            <div class="media-body">
+                                <a class="media-heading">我的收藏</a>
+                            </div>
+                        </div>
+                        <div role="separator" class="divider"></div>
+                        <div class="media">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/out.png">
+                            </div>
+
+                            <div class="media-body" >
+                                <a id="loginOut" href="#" class="media-heading">退出登陆</a>
+                            </div>
+                        </div>
+
+                        <!-- <a class="dropdown-item" href="#">个人主页</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">资料设置</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">我的帖子</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">我的收藏</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">退出登录</a> -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

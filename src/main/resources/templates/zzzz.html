@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <title>test</title>
+    <script>
+        $(document).ready(function () {
+            $("#bt").click(function () {
+                var $test = $("<P>aassdf</P>");
+                $("ul").append($test);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        选择你喜欢的水果
+    </p>
+    <ul>
+        <li title="apple">apple</li>
+        <li title="orange">orange</li>
+
+    </ul>
+<button id="bt">点我</button>
+
+</body>
+</html>
