@@ -147,7 +147,10 @@ public class AdminController {
     public Result getStarArticlePageNum(){
         return Result.resultData(200,"success",articleService.articleNum("2")/20+1);
     }
-
+//    @GetMapping(value = "/userInfo")
+//    public Result getUserInfo(@RequestParam("userName")String userName){
+//        return Result.resultData(200,"success",userService.queryInfo(userName));
+//    }
     //获取精品文章api
     @GetMapping(value = "/admin/starArticle")
     public Result getAllStarArticle(@RequestParam(name = "page",required = false)String page){

@@ -4,6 +4,7 @@ import com.maple.bbs.domain.Result;
 import com.maple.bbs.domain.User;
 import com.maple.bbs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +17,10 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+    @PostMapping(value = "/userInfo")
+    public Result getUserInfo(@RequestParam("userName")String userName){
+        return Result.resultData(200,"success",userService.queryInfo(userName));
+    }
     //注册api
     @PostMapping(value = "/register")
     public Result registerController(HttpServletRequest request){

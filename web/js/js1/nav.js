@@ -4,7 +4,7 @@ $(function () {
         $(".home-login").hide();
         $(".home-userPane").show();
         // alert(sessionStorage.user);
-        alert(sessionStorage.user);
+
         var $user = JSON.parse(sessionStorage.user);
 
 
