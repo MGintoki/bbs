@@ -1,13 +1,16 @@
+
 $(function () {
     if(sessionStorage.user){
         $(".home-login").hide();
         $(".home-userPane").show();
         // alert(sessionStorage.user);
+        alert(sessionStorage.user);
         var $user = JSON.parse(sessionStorage.user);
 
 
+
         //这里取用户头像url不准确
-        var $userHead = "images/userHead/" + $user.userName + ".jpg";
+        var $userHead = "images/userHead/" + $user.headImg;
 
         $("#navbar-userHead").attr("src", $userHead);
 
@@ -22,7 +25,6 @@ $(function () {
         alert("error1")
     }
 });
-
 $(function () {
     $("#loginOut").bind("click", function () {
         sessionStorage.removeItem("user");
@@ -30,3 +32,8 @@ $(function () {
     });
 
 });
+$(function () {
+
+
+});
+

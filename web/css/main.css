@@ -19,9 +19,13 @@
     text-align: right;
 }
 .card-username{
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-family: "微软雅黑";
     margin-top: 10px;
+}
+.card-username:hover{
+    cursor: pointer;
+    color: #a8f68f;
 }
 .card-mainContent{
     margin-left: 5px;
@@ -173,4 +177,10 @@ thead{
 .navbar-right{
     margin: auto 15px;
 }
+
+.article-title:hover{
+    cursor: pointer;
+    color: #a8f68f;;
+}
+
 

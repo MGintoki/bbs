@@ -11,9 +11,10 @@
   <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+
   <script src="js/js1/index.js"></script>
   <script src="js/js1/nav.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/navbar.css">
   <title>bbs</title>
 </head>
@@ -110,7 +111,7 @@
                 </div>
 
                 <div class="media-body">
-                  <a class="media-heading">我的收藏</a>
+                  <a href="myStar.html" class="media-heading">我的收藏</a>
                 </div>
               </div>
               <div role="separator" class="divider"></div>
@@ -149,50 +150,9 @@
             <div class="panel-heading">
               <h5 class="panel-title">置顶区</h5>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="home-topArticle">
               <!-- 一条帖子 -->
-              <div class="well well-sm">
-                <!-- 主页帖子 -->
-                <div class="row">
-                  <!-- 发帖人头像 -->
-                  <div class="col-sm-2 clearfix">
-                    <img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">
-                  </div>
-                  <!-- 帖子主体 -->
-                  <div class="col-sm-8 clearfix" card-mainContent>
-                    <div class="row">
-                      <!-- 帖子类型，btn-type -->
 
-                      <a class="card-username col-sm-2">
-                        MGintoki
-                      </a>
-                      <!-- 帖子标题 -->
-                      <div class="col-sm-8">
-                        <h4>测试帖子</h4>
-                      </div>
-                      <div class="col-sm-2">
-                       <img class="reply" src="images/reply.png" alt=""> 100
-                      </div>
-                    </div>
-                    <div class="row">
-                      <!-- 作者 -->
-                      <div class="col-sm-2">
-                        <div class="label label-info content-label ">社区公告</div>
-                      </div>
-                      <!-- 发帖时间 -->
-                      <div class="col-sm-5">
-                        2018-6-13 15:30:23
-                      </div>
-                      <div class="recent-reply col-sm-5">
-                        最近回复于
-                        <a href="">fengluo1229</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- 阅读与回帖数量 -->
-
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -201,73 +161,29 @@
             <div class="panel-heading">
               <ul class="nav nav-tabs nav-justified" role="tablist">
                 <li class="nav-item active">
-                  <a class="nav-link active" data-toggle="tab" href="#home">所有帖子</a>
+                  <a title="所有帖子" class="nav-link1 active" data-toggle="tab" href="#home">所有帖子</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">技术交流</a>
+                  <a title="技术交流" class="nav-link home-nav" data-toggle="tab" href="#menu2">技术交流</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">日常灌水</a>
+                  <a title="日常灌水" class="nav-link home-nav" data-toggle="tab" href="#menu2">日常灌水</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">投诉建议</a>
+                  <a title="投诉建议" class="nav-link home-nav" data-toggle="tab" href="#menu2">投诉建议</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">求助问答</a>
+                  <a title="求助问答" class="nav-link home-nav" data-toggle="tab" href="#menu2">求助问答</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">休闲交友</a>
+                  <a title="休闲交友" class="nav-link home-nav" data-toggle="tab" href="#menu2">休闲交友</a>
                 </li>
                 
 
               </ul>
             </div>
             <div class="panel-body" id="allCard-panel">
-              
-              <!--&lt;!&ndash; 一条帖子 &ndash;&gt;-->
-              <!--<div class="well well-sm">-->
-                <!--&lt;!&ndash; 主页帖子 &ndash;&gt;-->
-                <!--<div class="row">-->
-                  <!--&lt;!&ndash; 发帖人头像 &ndash;&gt;-->
-                  <!--<div class="col-sm-2 clearfix">-->
-                    <!--<img class="img-thumbnail content-card-head" src="images/headpic.png" alt="">-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; 帖子主体 &ndash;&gt;-->
-                  <!--<div class="col-sm-8 clearfix" card-mainContent>-->
-                    <!--<div class="row">-->
-                      <!--&lt;!&ndash; 帖子类型，btn-type &ndash;&gt;-->
-
-                      <!--<a class="card-username col-sm-2">-->
-                        <!--MGintoki-->
-                      <!--</a>-->
-                      <!--&lt;!&ndash; 帖子标题 &ndash;&gt;-->
-                      <!--<div class="col-sm-8">-->
-                        <!--<h4>测试帖子</h4>-->
-                      <!--</div>-->
-                      <!--<div class="col-sm-2">-->
-                       <!--<img class="reply" src="images/reply.png" alt=""> 100-->
-                      <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="row">-->
-                      <!--&lt;!&ndash; 作者 &ndash;&gt;-->
-                      <!--<div class="col-sm-2">-->
-                        <!--<div class="label label-info content-label ">社区公告</div>-->
-                      <!--</div>-->
-                      <!--&lt;!&ndash; 发帖时间 &ndash;&gt;-->
-                      <!--<div class="col-sm-5">-->
-                        <!--2018-6-13 15:30:23-->
-                      <!--</div>-->
-                      <!--<div class="recent-reply col-sm-5">-->
-                        <!--最近回复于-->
-                        <!--<a href="">fengluo1229</a>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                  <!--&lt;!&ndash; 阅读与回帖数量 &ndash;&gt;-->
-
-                <!--</div>-->
-              <!--</div>-->
 
             </div>
           </div>
@@ -315,19 +231,9 @@
             <div class="panel-heading">
               <h3 class="panel-title">精品区</h3>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="home-starArticle">
               <!-- 一条帖子 -->
-              <div class="well">
-                <div class="row">
-                  <div class="col-sm-2">
-                    <img src="images/headpic.png" alt="">
-                  </div>
-                  <div class="col-sm-8">
-                    测试帖子
-                  </div>
 
-                </div>
-              </div>
             </div>
           </div>
         </div>
