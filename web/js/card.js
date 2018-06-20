@@ -89,13 +89,13 @@ function createReply(reply) {
         "                                <a href=\""+"./profile.html?visit=" + author+"\" class=\"link-userName\">\n" +
         "                                        "+author+"\n" +
         "                                </a>\n" +
-        "                                <div class=\"data\">\n" +
+        "                                <div class=\"data reply-data\">\n" +
         "                                    "+ postTime+"\n" +
         "                                </div>\n" +
         "                            </div>\n" +
         "\n" +
         "                        </div>\n" +
-        "                        <div class=\"article-content row\">\n" +
+        "                        <div id='bbbb' class=\"article-content row\">\n" +
         "                            <p>"+ message+"</p>\n" +
         "                        </div>"+
         "</div>"
