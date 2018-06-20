@@ -4,3 +4,9 @@
 #navbar-dropdown-menu a{
     text-decoration: none;
 }
+.navbar {
+margin: 0 20%;
+}
+.container{
+width: 60%;
+}

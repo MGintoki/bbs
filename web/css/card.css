@@ -2,3 +2,10 @@ span.card-userName{
     font-weight: bold;
     color:#2aabd2;
 }
+.reply-pic{
+    width: 50px;
+}
+.changeBtn{
+
+    margin: 0 40%;
+}

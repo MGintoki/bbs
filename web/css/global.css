@@ -1,0 +1,26 @@
+.container-fluid{
+    margin: 0 20%;
+}
+.link-userName{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.link-userName:hover{
+    text-decoration: none;
+}
+
+.article-title{
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.article-title:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.aaaa{
+    margin-top: 5px;
+}
+.navbar-brand{
+    margin-left: 5px;
+}

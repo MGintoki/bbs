@@ -14,8 +14,10 @@
 
   <script src="js/index.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/indexChangePage.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/global.css">
   <title>bbs</title>
 </head>
 
@@ -37,8 +39,8 @@
 <body>
 
   <div class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-left">
         <a href="index.html" class="navbar-brand">BBS论坛</a>
       </div>
       <!--<ul class="nav navbar-nav">-->
@@ -87,7 +89,7 @@
                 </div>
               </div>
               <div role="separator" class="divider"></div>
-              <div role="separator" class="divider"></div>
+
               <div class="media">
                 <div class="media-left media-center">
                   <img class="align-self-center mr-1" src="images/password.png">
@@ -125,6 +127,16 @@
                   <a id="loginOut" href="#" class="media-heading">退出登陆</a>
                 </div>
               </div>
+              <div role="separator" class="divider"></div>
+              <div class="media">
+                <div class="media-left media-center">
+                  <img class="align-self-center mr-1" src="images/admin.png">
+                </div>
+
+                <div class="media-body" >
+                  <a id="adminEntrance" href="./admin/admin.html" class="media-heading">管理员入口</a>
+                </div>
+              </div>
 
 
             </div>
@@ -135,7 +147,7 @@
   </div>
 
 
-  <div class="container">
+  <div id="index-container" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
         <div class="top-card">
@@ -179,6 +191,13 @@
             <div class="panel-body" id="allCard-panel">
 
             </div>
+          </div>
+        </div>
+        <div class="col">
+          <div id="homeChangeBtn" class="btn-group" role="group" aria-label="...">
+
+
+
           </div>
         </div>
       </div>

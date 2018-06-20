@@ -1,9 +1,9 @@
-.navbar {
-    margin: 0 20%;
-}
-.container{
-
-}
+/*.navbar {*/
+    /*margin: 0 20%;*/
+/*}*/
+/*#index-container{*/
+    /*width: 60%;*/
+/*}*/
 .content-card-head{
     width: 60px;
     height: 60px;
@@ -171,9 +171,7 @@ thead{
     width: 60px;
     
 }
-.navbar-right{
-    margin: auto 15px;
-}
+
 
 .article-title:hover{
     cursor: pointer;
