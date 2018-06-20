@@ -1,13 +1,9 @@
 .navbar {
-    margin: 0 17% 30px;
-}
-/* body{
-    margin: 0 15%;
+    margin: 0 20%;
 }
 .container{
-    margin-right: 15%;
-    margin-left: 15%;
-} */
+
+}
 .content-card-head{
     width: 60px;
     height: 60px;
@@ -189,4 +185,8 @@ thead{
 
 .media-heading:hover{
     color: #a8f68f;
+}
+
+.star-head{
+    width: 30px;
 }

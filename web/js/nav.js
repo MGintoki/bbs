@@ -5,16 +5,21 @@ $(function () {
     if(sessionStorage.user){
         $(".home-login").hide();
         $(".home-userPane").show();
-        // alert(sessionStorage.user);
+         // alert(sessionStorage.user);
 
         var $user = JSON.parse(sessionStorage.user);
 
 
-
+var $userName = $user.userName;
         //这里取用户头像url不准确
-        var $userHead = "images/userHead/" + $user.headImg;
+        var userHead = getUserHeadImg($userName);
+        var src = "upload/images/";
+        src += userHead;
+        $("#navbar-userHead").attr("src", src);
 
-        $("#navbar-userHead").attr("src", $userHead);
+        $("#nav-userName").text($userName);
+
+
 
 
     }else if(!sessionStorage.user){
@@ -45,3 +50,30 @@ $(function () {
     })
 });
 
+$(function () {
+   if(sessionStorage.user){
+       var $user = JSON.parse(sessionStorage.user);
+       if($user.authority == 1){
+           $(".btn-sm").show()
+       }else {
+           $(".btn-sm").hide();
+       }
+   }
+    $(".btn-sm").hide();
+});
+
+function getUserHeadImg(userName){
+    var headImg="";
+    $.ajax({
+        url:"http://127.0.0.1:8080/headImg",
+        type:"get",
+        data:{
+            userName:userName
+        },
+        async:false,
+        success:function(data){
+            headImg = data.data;
+        }
+    });
+    return headImg;
+}

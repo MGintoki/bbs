@@ -203,9 +203,8 @@ function createTopArticle(card) {
     var articleBody = card.articleBody;
     var author = card.author;
     var sort = card.sort;
+    var img = getUserHeadImg(author);
     var label = card.label;
-    var headImg = card.headImg;
-
     var postTime = card.postTime;
     var lastReplyAuthor = card.lastReplyAuthor;
     var replyNum = card.replyNum;
@@ -214,12 +213,12 @@ function createTopArticle(card) {
 
 
 
-    var $card = $("<div class=\"well well-sm\">\n" +
+    var $card = $("<div id=\"\" class=\"well well-sm\">\n" +
         "             \n" +
         "                <div class=\"row\">\n" +
         "                 \n" +
         "                  <div class=\"col-sm-2 clearfix\">\n" +
-        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"images/userHead/demo.png\" alt=\"\">\n" +
+        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"upload/images/"+ img +"\" alt=\"\">\n" +
         "                  </div>\n" +
         "                \n" +
         "                  <div class=\"col-sm-8 clearfix\" card-mainContent>\n" +
@@ -256,7 +255,7 @@ function createTopArticle(card) {
         "                      </div>\n" +
         "                     \n" +
         "                      <div class=\"col-sm-5\">\n" +
-        "                        2018-6-13 15:30:23\n" +
+        postTime +
         "                      </div>\n" +
         "                      <div class=\"recent-reply col-sm-5\">\n" +
         "                        最近回复于\n" +
@@ -277,6 +276,7 @@ function createStarArticle(card) {
     var articleBody = card.articleBody;
     var author = card.author;
     var sort = card.sort;
+    var img = getUserHeadImg(author);
     var label = card.label;
     var postTime = card.postTime;
     var lastReplyAuthor = card.lastReplyAuthor;
@@ -285,11 +285,17 @@ function createStarArticle(card) {
     var $card = $("<div class=\"well\">\n" +
         "        <div class=\"row\">\n" +
         "        <div class=\"col-sm-2\">\n" +
-        "        <img class='author-head star-head' title=\"" + author + "\" src=\"images/headpic.png\" alt=\"\">\n" +
+        "        <img class='author-head star-head' title=\"" + author + "\" src=\"upload/images/"+ img+"\" alt=\"\">\n" +
         "        </div>\n" +
-        "        <div class=\"article-title col-sm-8\">\n" +
+        "<div class=\"col-sm-4\">" +
+        "<a class=\"link-userName card-username col-sm-3\">" +
+        author +
+        "</a>" +
+        "</div>" +
+        "        <h4 class=\"article-title col-sm-5\">\n" +
         articleTitle +
-        "        </div>\n" +
+
+        "        </h4>\n" +
         "\n" +
         "        </div>\n" +
         "        </div>");
@@ -304,7 +310,7 @@ function createAllCard(card) {
     var articleBody = card.articleBody;
     var author = card.author;
     var sort = card.sort;
-
+    var img = getUserHeadImg(author);
     var label = card.label;
     var postTime = card.postTime;
     var lastReplyAuthor = card.lastReplyAuthor;
@@ -319,7 +325,7 @@ function createAllCard(card) {
         "                <div class=\"row\">\n" +
         "                 \n" +
         "                  <div class=\"col-sm-2 clearfix\">\n" +
-        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"images/userHead/demo.png\" alt=\"\">\n" +
+        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"upload/images/"+ img +"\" alt=\"\">\n" +
         "                  </div>\n" +
         "                \n" +
         "                  <div class=\"col-sm-8 clearfix\" card-mainContent>\n" +
@@ -356,7 +362,7 @@ function createAllCard(card) {
         "                      </div>\n" +
         "                     \n" +
         "                      <div class=\"col-sm-5\">\n" +
-        "                        2018-6-13 15:30:23\n" +
+       postTime +
         "                      </div>\n" +
         "                      <div class=\"recent-reply col-sm-5\">\n" +
         "                        最近回复于\n" +
@@ -435,3 +441,19 @@ function createCard() {
     return $card;
 }
 
+function getUserHeadImg(userName){
+    var headImg="";
+    $.ajax({
+        url:"http://127.0.0.1:8080/headImg",
+        type:"get",
+        data:{
+            userName:userName
+        },
+        async:false,
+        success:function(data){
+            headImg = data.data;
+        }
+    });
+    return headImg;
+
+}
