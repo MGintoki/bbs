@@ -23,10 +23,10 @@ function getHeadImg(userName, obj) {
             'userName':userName
         },
         success:function (data) {
-            var headImg = getUserHeadImg(userName);
+            var headImg = data.data.headImg;
             console.log(data);
             var clazz = "." + userName;
-            var headImgSrc =  headImg;
+            var headImgSrc = "images/userHead/" + headImg;
             obj.setAttribute("src", headImgSrc);
             // $(id).attr('src', headImgSrc);
 
@@ -218,7 +218,7 @@ function createTopArticle(card) {
         "                <div class=\"row\">\n" +
         "                 \n" +
         "                  <div class=\"col-sm-2 clearfix\">\n" +
-        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\""+ img +"\" alt=\"\">\n" +
+        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"upload/images/"+ img +"\" alt=\"\">\n" +
         "                  </div>\n" +
         "                \n" +
         "                  <div class=\"col-sm-8 clearfix\" card-mainContent>\n" +
@@ -229,20 +229,20 @@ function createTopArticle(card) {
         author +
         "                      </a>\n" +
         "                    \n" +
-        "                      <div class=\"col-sm-6 aaaa\">\n" +
+        "                      <div class=\"col-sm-6\">\n" +
         "                        <a href=\""+ "./card.html?articleId="+ articleId+"\" class=\"article-title\">" + articleTitle + "</a>\n" +
         "                      </div>\n" +
         "                      <div class=\"col-sm-2\">\n" +
-        // "                          <div id='admin-btn-group' class=\"btn-group\">\n" +
-        // "                              <button type=\"button\" class=\"btn-sm btn btn-info master-btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
-        // "                                 管理<span class=\"caret\"></span>\n" +
-        // "                              </button>\n" +
-        // "                              <ul class=\"dropdown-menu\">\n" +
-        // "                                <li><a href=\"#\">删除</a></li>\n" +
-        // "                                <li><a href=\"#\">置顶</a></li>\n" +
-        // "                                <li><a href=\"#\">加精</a></li>\n" +
-        // "                              </ul>\n" +
-        // "                            </div>\n" +
+        "                          <div id='admin-btn-group' class=\"btn-group\">\n" +
+        "                              <button type=\"button\" class=\"btn-sm btn btn-info master-btn dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
+        "                                 管理<span class=\"caret\"></span>\n" +
+        "                              </button>\n" +
+        "                              <ul class=\"dropdown-menu\">\n" +
+        "                                <li><a href=\"#\">删除</a></li>\n" +
+        "                                <li><a href=\"#\">置顶</a></li>\n" +
+        "                                <li><a href=\"#\">加精</a></li>\n" +
+        "                              </ul>\n" +
+        "                            </div>\n" +
         "                      </div>\n" +
         "                      <div class=\"col-sm-2\">\n" +
         "                       <img class=\"reply\" src=\"images/reply.png\" alt=\"\">\n" + replyNum +
@@ -258,8 +258,8 @@ function createTopArticle(card) {
         postTime +
         "                      </div>\n" +
         "                      <div class=\"recent-reply col-sm-4\">\n" +
-        // "                        最近回复于\n" +
-        // "                        <span class='link-userName card-username'>"+ lastReplyAuthor +"</span>\n" +
+        "                        最近回复于\n" +
+        "                        <span class='link-userName card-username'>"+ lastReplyAuthor +"</span>\n" +
         "                      </div>\n" +
         "                    </div>\n" +
         "                  </div>\n" +
@@ -285,14 +285,14 @@ function createStarArticle(card) {
     var $card = $("<div class=\"well\">\n" +
         "        <div class=\"row\">\n" +
         "        <div class=\"col-sm-2\">\n" +
-        "        <img class='author-head star-head' title=\"" + author + "\" src=\""+ img+"\" alt=\"\">\n" +
+        "        <img class='author-head star-head' title=\"" + author + "\" src=\"upload/images/"+ img+"\" alt=\"\">\n" +
         "        </div>\n" +
         "<div class=\"col-sm-4\">" +
         "<a href=\"./profile.html?visit="+ author+"\" class=\"link-userName card-username col-sm-2\">\n" +
         author +
         "                      </a>" +
         "</div>" +
-        "         <a href=\""+ "./card.html?articleId="+ articleId+"\" class=\"article-title aaaa\">" + articleTitle + "</a>\n" +
+        "         <a href=\""+ "./card.html?articleId="+ articleId+"\" class=\"article-title\">" + articleTitle + "</a>\n" +
         "\n" +
         "        </div>\n" +
         "        </div>");
@@ -322,7 +322,7 @@ function createAllCard(card) {
         "                <div class=\"row\">\n" +
         "                 \n" +
         "                  <div class=\"col-sm-2 clearfix\">\n" +
-        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\""+ img +"\" alt=\"\">\n" +
+        "                    <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"upload/images/"+ img +"\" alt=\"\">\n" +
         "                  </div>\n" +
         "                \n" +
         "                  <div class=\"col-sm-8 clearfix\" card-mainContent>\n" +
@@ -334,7 +334,7 @@ function createAllCard(card) {
         "                      </a>\n" +
         "                    \n" +
         "                      <div class=\"col-sm-6\">\n" +
-        "                        <a href=\""+ "./card.html?articleId="+ articleId+"\" class=\"article-title aaaa\">" + articleTitle + "</a>\n" +
+        "                        <a href=\""+ "./card.html?articleId="+ articleId+"\" class=\"article-title\">" + articleTitle + "</a>\n" +
         "                      </div>\n" +
         "                      <div class=\"col-sm-2\">\n" +
         "                          <div class=\"btn-group\">\n" +
@@ -342,9 +342,9 @@ function createAllCard(card) {
         "                                 管理<span class=\"caret\"></span>\n" +
         "                              </button>\n" +
         "                              <ul class=\"dropdown-menu\">\n" +
-        "                                <li><a onclick='deleteArticle("+ articleId +")' href=\"#\">删除</a></li>\n" +
-        "                                <li><a onclick='topArticle("+ articleId +")' href=\"#\">置顶</a></li>\n" +
-        "                                <li><a onclick='starArticle("+ articleId +")' href=\"#\">加精</a></li>\n" +
+        "                                <li><a href=\"#\">删除</a></li>\n" +
+        "                                <li><a href=\"#\">置顶</a></li>\n" +
+        "                                <li><a href=\"#\">加精</a></li>\n" +
         "                              </ul>\n" +
         "                            </div>\n" +
         "                      </div>\n" +
@@ -453,87 +453,4 @@ function getUserHeadImg(userName){
     });
     return headImg;
 
-}
-
-function getButton() {
-    // alert("getbutton");
-    $($.ajax({
-        url:"http://127.0.0.1:8080/article/pageNum",
-        type:"get",
-
-        success:function(data){
-            var pageNum=data.data;
-            for(var i=1;i<=pageNum;i++){
-
-                var $btn = $("<button type=\"button\" title=\"\" class=\"homeChangeBtn btn btn-default\" onclick='changePage(" + i + ")'>第" + i+"页</button>");
-                $("#changeBtn").append($btn);
-            }
-
-        }
-    }));
-}
-function getQueryString(name) {
-    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) {return unescape(r[2]);
-    }
-    return null;}//根据用户名获取头像信息
-function getUserHeadImg(userName){
-    var headImg="";
-    $.ajax({
-        url:"http://127.0.0.1:8080/headImg",
-        type:"get",
-        data:{
-            userName:userName
-        },
-        async:false,
-        success:function(data){
-            headImg = data.data;}
-    });
-    return headImg;
-}
-function topArticle(articleId) {
-
-    var url = "http://127.0.0.1:8080/t/" + articleId +"/top";
-    $.ajax({
-        url:url,
-        type:"post",
-
-        async:false,
-        success:function(data){
-            alert("置顶成功");
-            location.reload();
-        }
-    });
-
-    return false;
-}
-function starArticle(articleId) {
-    var url = "http://127.0.0.1:8080/t/" + articleId +"/star";
-    $.ajax({
-        url:url,
-        type:"post",
-
-        async:false,
-        success:function(data){
-            alert("加精成功");
-            location.reload();
-        }
-    });
-    return false;
-}
-function deleteArticle(articleId) {
-    $.ajax({
-        url:"http://127.0.0.1:8080/deleteArticle",
-        type:"post",
-        data:{
-            articleId:articleId
-        },
-        async:false,
-        success:function(data){
-            alert("删除成功！")
-            location.reload();
-        }
-    });
-    return false;
 }

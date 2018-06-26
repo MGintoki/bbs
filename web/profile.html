@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/profile.css">
-    <link rel="stylesheet" type="text/css" href="css/global.css">
     <script src="js/nav.js"></script>
     <script src="js/profile.js"></script>
 
@@ -23,27 +22,22 @@
 
 <body>
 <div class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header navbar-left">
+    <div class="container">
+        <div class="navbar-header">
             <a href="index.html" class="navbar-brand">BBS论坛</a>
         </div>
-        <!--<ul class="nav navbar-nav">-->
-        <!--<li>-->
-        <!--<a class="active" href="#">首页</a>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<a href="#">产品</a>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<a href="#">联系我们</a>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--<form class="navbar-form navbar-left">-->
-        <!--<div class="form-group">-->
-        <!--<input type="text" class="form-control">-->
-        <!--</div>-->
-        <!--<button type="submit" class="btn btn-default btn-sm">搜索一下</button>-->
-        <!--</form>-->
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="active" href="#">首页</a>
+            </li>
+
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-default btn-sm">搜索一下</button>
+        </form>
         <ul class="nav navbar-nav navbar-right">
             <li>
                 <a class="home-login" href="login.html">登录</a>
@@ -52,15 +46,14 @@
                 <a href="reg.html">注册</a>
             </li>
             <li class="home-userPane" id="userPane">
-                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.png" alt="img-circle">
+                <img class="userPane-userHead img-circle" id="navbar-userHead" src="images/userHead/demo.jpg"
+                     alt="img-circle">
             </li>
             <li class="home-userPane">
                 <div class="dropdown">
-                    <!-- <button type="button" class="drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
-                    <!-- Mgintoki -->
-                    <!-- </button> -->
-                    <button id="nav-btn1" type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span id="nav-userName">demo</span>
+
+                    <button type="button" class="btn-drop btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        MGintoki
                         <span class=" drop-triangle glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
                     </button>
                     <div class="dropdown-menu list-group" id="navbar-dropdown-menu">
@@ -69,17 +62,7 @@
                                 <img class="align-self-center mr-1" src="images/headpic.png">
                             </div>
                             <div class="media-body">
-                                <a  href="./profile.html" class="media-heading">个人主页</a>
-                            </div>
-                        </div>
-                        <div role="separator" class="divider"></div>
-
-                        <div class="media">
-                            <div class="media-left media-center">
-                                <img class="align-self-center mr-1" src="images/password.png">
-                            </div>
-                            <div class="media-body">
-                                <a href="passwordSetting.html" class="media-heading">修改密码</a>
+                                <a href="./profile.html" class="media-heading">个人主页</a>
                             </div>
                         </div>
                         <div role="separator" class="divider"></div>
@@ -100,37 +83,43 @@
                                 <a href="myCard.html" class="media-heading">我的帖子</a>
                             </div>
                         </div>
+                        <div role="separator" class="divider"></div>
+                        <div class="media">
+                            <div class="media-left media-center">
+                                <img class="align-self-center mr-1" src="images/heart.png">
+                            </div>
 
+                            <div class="media-body">
+                                <a href="myStar.html" class="media-heading">我的收藏</a>
+                            </div>
+                        </div>
                         <div role="separator" class="divider"></div>
                         <div class="media">
                             <div class="media-left media-center">
                                 <img class="align-self-center mr-1" src="images/out.png">
                             </div>
 
-                            <div class="media-body" >
+                            <div class="media-body">
                                 <a id="loginOut" href="#" class="media-heading">退出登陆</a>
                             </div>
                         </div>
-                        <div role="separator" class="divider"></div>
-                        <div class="media">
-                            <div class="media-left media-center">
-                                <img class="align-self-center mr-1" src="images/admin.png">
-                            </div>
 
-                            <div class="media-body" >
-                                <a id="adminEntrance" href="./admin/admin.html" class="media-heading">管理员入口</a>
-                            </div>
-                        </div>
-
-
+                        <!-- <a class="dropdown-item" href="#">个人主页</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">资料设置</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">我的帖子</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">我的收藏</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">退出登录</a> -->
                     </div>
                 </div>
             </li>
         </ul>
     </div>
 </div>
-
-<div class="container-fluid profile">
+<div class="container profile">
     <div class="row">
         <div class="col-sm-8">
             <div class="panel panel-default">
@@ -158,7 +147,7 @@
             </div>
             <div class="col-sm-2">
                 <a class="link-userName card-username col-sm-2">
-
+                    dd
                 </a>
             </div>
 

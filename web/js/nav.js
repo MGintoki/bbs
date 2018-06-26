@@ -5,23 +5,22 @@ $(function () {
     if(sessionStorage.user){
         $(".home-login").hide();
         $(".home-userPane").show();
-         // alert(sessionStorage.user);
+         alert(sessionStorage.user);
 
         var $user = JSON.parse(sessionStorage.user);
         var $userAuthority = $user.authority;
             if($userAuthority != 1){
                 $("#admin-btn-group").hide();
-                $("#adminEntrance").hide();
             }else {
                 $("#admin-btn-group").show();
-                $("#adminEntrance").show();
             }
 
 var $userName = $user.userName;
         //这里取用户头像url不准确
         var userHead = getUserHeadImg($userName);
-
-        $("#navbar-userHead").attr("src", userHead);
+        var src = "upload/images/";
+        src += userHead;
+        $("#navbar-userHead").attr("src", src);
 
         $("#nav-userName").text($userName);
 
@@ -32,7 +31,7 @@ var $userName = $user.userName;
         $(".home-login").show();
         $(".home-userPane").hide();
         $("#admin-btn-group").hide();
-        $("#navbar-userHead").attr("src", "images/userHead/demo.png");
+        $("#navbar-userHead").attr("src", "images/userHead/demo.jpg");
 
     }
     else {
@@ -50,7 +49,13 @@ $(function () {
  * 为全局的所有名字添加一个点击事件
  * 跳转到个人主页并且传入一个参数visitName
  */
-
+$(function () {
+    $(".link-userName").click(function () {
+        var $userName = this.attr("title");
+        var $URL = "./profile.html?visit=" + $userName;
+        window.location.href = $URL;
+    })
+});
 
 $(function () {
    if(sessionStorage.user){

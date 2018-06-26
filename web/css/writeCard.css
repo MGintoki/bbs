@@ -1,3 +1,6 @@
+.container-fluid{
+    margin: 15px 20%;
+}
 
 #writeCard-label{
     margin-bottom: 15px;

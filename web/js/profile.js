@@ -43,17 +43,15 @@ function getProfile(userName) {
 
 function getProfile2(user) {
 
-    // alert(user);
+
     var userName = user.userName;
-    // alert(userName);
     var headImg = getUserHeadImg(userName);
-    // alert(headImg);
 
     var regTime = user.registerTime;
     var message = user.message;
     var $profile = $(" <ul class=\"list-group\" id=\"porfile-group\">\n" +
-        "                        <li class=\"list-group-item\"><img src=\"" + headImg + "\" class=\"img-circle\" id=\"profile-img\"\n" +
-        "                                                         alt=\"userHead\" ></li>\n" +
+        "                        <li class=\"list-group-item\"><img class=\"img-circle\" id=\"profile-img\" src=\"upload/images/"+ headImg+"\"\n" +
+        "                                                         alt=\"userHead\" class=\"img-responsive\"></li>\n" +
         "                        <li class=\"list-group-item\"><h3 id=\"profile-userName\" class=\"username\">"+ userName+"</h3></li>\n" +
         "                        <li class=\"list-group-item\"><h6 id=\"profile-regTime\" class=\"regTime\">"+ regTime+"</h6></li>\n" +
         "                        <li class=\"list-group-item\"><p id=\"profile-message\">"+ message+"</li>\n" +
@@ -62,6 +60,7 @@ function getProfile2(user) {
 
     $("#profile-body").append($profile);
 };
+
 function getUserHeadImg(userName){
     var headImg="";
     $.ajax({
@@ -76,6 +75,7 @@ function getUserHeadImg(userName){
         }
     });
     return headImg;
+
 }
 function getCard(userName) {
     $.ajax({
@@ -116,7 +116,7 @@ function createCard(card) {
     var $card = $("<div class=\"well\">\n" +
         "        <div class=\"row\">\n" +
         "        <div class=\"col-sm-2\">\n" +
-        "        <img src=\""+ img +"\" title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" >\n" +
+        "        <img title=\"" + author + "\" id=\""+ articleId +"\" class=\"author-head headPic img-thumbnail content-card-head\" src=\"upload/images/"+ img +"\" alt=\"\">\n" +
         "        </div>\n" +
         "<div class=\"col-sm-4\">" +
         "<a href=\"./profile.html?visit="+ author+"\" class=\"link-userName card-username col-sm-2\">\n" +

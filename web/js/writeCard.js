@@ -1,7 +1,7 @@
 $(function () {
     // alert($("#writeCard-select").val());
    $("#writeCard-btn").click(function () {
-       // alert("1");
+       alert("1");
        var $user = JSON.parse(sessionStorage.user);
        var $userName = $user.userName;
        $.ajax({

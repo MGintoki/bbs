@@ -171,7 +171,9 @@ thead{
     width: 60px;
     
 }
-
+.navbar-right{
+    margin: auto 15px;
+}
 
 .article-title:hover{
     cursor: pointer;
